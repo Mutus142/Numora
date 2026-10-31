@@ -17,4 +17,22 @@ int main(void) {
     if (opcao == 1) {
         soma();
     }
+
+    else if (opcao == 2) {
+        subtracao();
+    }
+
+    else if (opcao == 3) {
+        divisao();
+    }
+
+    else if (opcao == 4) {
+        multiplicao();
+    }
+
+    else if (opcao == 5) {
+        printf("Saindo...");
+    }
+
+    return 0;
 }
