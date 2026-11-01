@@ -13,34 +13,59 @@ int soma(void) {
     scanf("%d", &numero2);
 
     resultado = numero1 + numero2;
-    printf("O resultado é: \n", resultado);
+    printf("O resultado é: %d\n", resultado);
 
-    int menu(void) {
-        
-        int opcao;
+    return 0;
+}
 
-        printf("Escolha uma opção agora:\n");
-        printf("1 - Voltar ao menu principal\n");
-        printf("2 - Fazer uma nova soma");
-        printf("3 - Sair");
+int subtracao(void) {
 
-        scanf("%d", opcao);
+    int numero1;
+    int numero2;
+    int resultado;
 
-        if (opcao == 1) {
-            return
-        }
+    printf("Digite o primeiro numero: \n");
+    scanf("%d", &numero1);
 
-        else if (opcao == 2) {
-            soma();
-        }
+    printf("Digite o segundo numero: \n");
+    scanf("%d", &numero2);
 
-        else if (opcao == 3) {
-            break;
-        }
+    resultado = numero1 - numero2;
+    printf("O resultado é: \n", &resultado);
 
-        else {
-            printf("Opção invalida!");
-            return 0;
-        }
+    return 0;
+}
+
+int menu(void) {
+
+    int opcao;
+
+    printf("Escolha uma opção agora:\n");
+    printf("1 - Voltar ao menu principal\n");
+    printf("2 - Sair\n");
+
+    scanf("%d", &opcao);
+
+    if (opcao == 1) {
+        return 0;
     }
+
+    else if (opcao == 2) {
+        return 0;
+    }
+
+    else {
+        printf("Opção invalida!\n");
+        return 0;
+    }
+
+    return 0;
+}
+
+int main(void) {
+
+    soma();
+    subtracao();
+
+    return 0;
 }
