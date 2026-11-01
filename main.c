@@ -12,26 +12,22 @@ int main(void) {
     printf("4 - Multiplicação\n");
     printf("5 - Sair\n");
 
-    scanf("%d", opcao);
+    scanf("%d", &opcao);
 
     if (opcao == 1) {
         soma();
     }
-
     else if (opcao == 2) {
         subtracao();
     }
-
     else if (opcao == 3) {
         divisao();
     }
-
     else if (opcao == 4) {
-        multiplicao();
+        multiplicacao();
     }
-
     else if (opcao == 5) {
-        printf("Saindo...");
+        printf("Saindo...\n");
     }
 
     return 0;

@@ -1,4 +1,6 @@
+
 #include <stdio.h>
+#include "calc.h"
 
 int soma(void) {
 
@@ -31,14 +33,13 @@ int subtracao(void) {
     scanf("%d", &numero2);
 
     resultado = numero1 - numero2;
-    printf("O resultado é: \n", &resultado);
+    printf("O resultado é: %d\n", resultado);
 
     return 0;
 }
 
-
 int divisao(void) {
-    
+
     int numero1;
     int numero2;
     int resultado;
@@ -49,18 +50,37 @@ int divisao(void) {
     printf("Digite o segundo numero: \n");
     scanf("%d", &numero2);
 
-    if (numero2 <= 0) {
-        printf("Você nao pode dividir um numero por zero!\n");
-        return;
+    if (numero2 == 0) {
+        printf("Você nao pode dividir por zero!\n");
+        return 0;
     }
 
     else {
         resultado = numero1 / numero2;
-        printf("O resultado é: \n", &resultado);
+        printf("O resultado é: %d\n", resultado);
     }
 
     return 0;
 }
+
+int multiplicacao(void) {
+
+    int numero1;
+    int numero2;
+    int resultado;
+
+    printf("Digite o primeiro numero: \n");
+    scanf("%d", &numero1);
+
+    printf("Digite o segundo numero: \n");
+    scanf("%d", &numero2);
+
+    resultado = numero1 * numero2;
+    printf("O resultado é: %d\n", resultado);
+
+    return 0;
+}
+
 int menu(void) {
 
     int opcao;
@@ -83,15 +103,6 @@ int menu(void) {
         printf("Opção invalida!\n");
         return 0;
     }
-
-    return 0;
-}
-
-int main(void) {
-
-    soma();
-    subtracao();
-    divisao();
 
     return 0;
 }
