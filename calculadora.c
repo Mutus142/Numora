@@ -83,25 +83,26 @@ int multiplicacao(void) {
 
 int menu(void) {
 
-    int opcao;
+    int opcao = 1;
 
-    printf("Escolha uma opção agora:\n");
-    printf("1 - Voltar ao menu principal\n");
-    printf("2 - Sair\n");
+    while (opcao != 1) {
+        printf("1 - Continuar\n");
+        printf("2 - Sair\n");
 
-    scanf("%d", &opcao);
+        scanf("%d", &opcao);
+
+    }
 
     if (opcao == 1) {
-        return 0;
+        return 1;
     }
 
     else if (opcao == 2) {
-        return 0;
+        return 2;
     }
 
     else {
-        printf("Opção invalida!\n");
-        return 0;
+        printf("Opção invalida!");
     }
 
     return 0;
